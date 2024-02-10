@@ -1,0 +1,11 @@
+apyori
+Flask
+kneed
+matplotlib
+numpy
+pandas
+scikit_learn
+scipy
+seaborn
+Werkzeug
+flask_cors
