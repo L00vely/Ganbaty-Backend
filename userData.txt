@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Actualizar paquetes
+sudo yum update -y
+
+# Instalar Git, Python 3, pip y nginx
+sudo yum install -y git python3 nginx python3-pip
+
+# Instalar virtualenv
+sudo pip3 install virtualenv
+
+# Clonar el repositorio
+git clone https://github.com/davenieur/Ganbaty-Backend
+
+# Entrar al directorio del repositorio
+cd Ganbaty-Backend
+
+# Crear un entorno virtual
+virtualenv venv
+
+# Activar el entorno virtual
+source venv/bin/activate
+
+# Instalar dependencias del proyecto
+pip install -r requirements.txt
+
+# Ejecutar el servidor
+python ./application.py 
